@@ -70,6 +70,7 @@ export const testApi = createApi({
             listener
           );
           await cacheEntryRemoved;
+          off(ref(database, query), eventType, listener);
         }
       });
     };
